@@ -1,9 +1,8 @@
 #!/bin/bash
 source .config.sh
 source .config-prod.sh
+# --baseURL=${FQDN}
 docker run --rm -i \
   -v $(pwd):/src \
-  -p 1313:1313 \
-  ${DOCKER_IMAGE_TAG} \
-  --baseURL=${FQDN}
+  ${DOCKER_IMAGE_TAG}
 
