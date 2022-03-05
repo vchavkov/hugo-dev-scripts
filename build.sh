@@ -5,8 +5,7 @@ source .config-prod.sh
 ## clean
 sudo rm -rf public/*
 
-CMD="docker run -it \
---rm \
+CMD="docker run \
 -v $(pwd):/src \
 ${DOCKER_IMAGE} \
 --baseURL=${FQDN}"
