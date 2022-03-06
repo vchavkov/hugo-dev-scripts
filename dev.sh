@@ -12,6 +12,11 @@ CMD="docker run \
 -p 1313:1313 \
 ${DOCKER_IMAGE} \
 server \
+--buildDrafts \
+--buildFuture \
+--ignoreCache \
+--disableFastRender \
+--verbose \
 --bind=${BIND_IP_ADDRESS} \
 --baseURL=${FQDN}"
 printf "\n$CMD\n\n"
